@@ -28,8 +28,8 @@ class KakaogiftTestcase (unittest.TestCase) :
         zzim = driver.find_element(By.CSS_SELECTOR, '#scrolled > cu-infinite-scroll > div > ul > li:nth-child(1) > app-view-themedeal-product > span > fu-view-favorite-button > span > button')
         zzim.click()
 
-        #kakao = driver.find_element(By.CSS_SELECTOR, '#__next > div > div > main > div > h1 > span')
-        #self.assertEqual(kakao.text, "Kakao")
+        kakao = driver.find_element(By.CSS_SELECTOR, '#__next > div > div > main > div > h1 > span')
+        self.assertEqual(kakao.text, "Kakao")
         
         time.sleep(5) #5초 기다림
         
