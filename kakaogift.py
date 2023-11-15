@@ -16,11 +16,11 @@ class KakaogiftTestcase (unittest.TestCase) :
         driver.maximize_window()
 
         manwon = driver.find_element(By.CSS_SELECTOR, '#mArticle > div > div.bunch_store.bunch_intro > app-view-short-cut > div > ul > li:nth-child(3) > a')
-        self.assertEqual(manwon.text,"만원톡딜")
+        self.assertEqual(manwon.text,"1+1 톡딜")
         
         manwon.click()
         themedeal = driver.find_element(By.CSS_SELECTOR,'#scrolled > div > div > strong')
-        self.assertEqual(themedeal.text, "만원 한장의 행복")
+        self.assertEqual(themedeal.text, "하나 사면 하나 더")
         
         body = driver.find_element(By.CSS_SELECTOR,'body')
         body.send_keys(Keys.PAGE_DOWN)
